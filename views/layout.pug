@@ -2,6 +2,12 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    include common/links.pug
   body
-    block content
+
+    include common/nav.pug
+    
+    .container
+      block content
+    
+    include common/scripts.pug
