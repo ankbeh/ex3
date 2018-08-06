@@ -1,7 +1,9 @@
 doctype html
 html
   head
-    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    title DSMC: #{title}
     include common/links.pug
   body
 
@@ -9,5 +11,5 @@ html
     
     .container
       block content
-    
+      include common/footer.pug
     include common/scripts.pug
