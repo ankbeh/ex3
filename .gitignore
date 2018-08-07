@@ -92,8 +92,8 @@ typings/
 .serverless
 
 #My Ignores
-useUser.json
+routes/account.json
+account.json
 
 
 # End of https://www.gitignore.io/api/node,linux
-

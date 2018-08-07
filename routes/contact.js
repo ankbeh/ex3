@@ -1,6 +1,6 @@
 var express = require('express');
 var nodemailer = require("nodemailer");
-var useUser = require('./useUser.json');
+var account = require('./account.json');
 var router = express.Router();
 
 /* GET home page. */
@@ -9,13 +9,13 @@ router.get('/', function(req, res, next) {
 });
 router.post('/send', function(req, res, next){
   var tranporter = nodemailer.createTransport({
-    host: useUser.host,
-    port: useUser.port,
-    secure: useUser.secure,
-    service: 'gmail',
+    host: account.host,
+    port: account.port,
+    secure: account.secure,
+    service: account.service,
     auth: {
-      user: useUser.name,
-      pass: useUser.password
+      user: account.name,
+      pass: account.password
     },
     logger: true,
     debug: true
